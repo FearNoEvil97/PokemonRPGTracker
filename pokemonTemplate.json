@@ -1,0 +1,62 @@
+{
+  "Name": "",
+  "Pokemon": "",
+  "Type": "",
+  "Starter": false,
+  "Gender": "",
+  "Ability": "",
+  "Base": {
+    "Str": 0,
+    "Dex": 0,
+    "Vit": 0,
+    "Spl": 0,
+    "Ins": 0,
+    "HP": 0
+  },
+  "Max": {
+    "Str": 0,
+    "Dex": 0,
+    "Vit": 0,
+    "Spl": 0,
+    "Ins": 0
+  },
+  "Added": {
+    "Str": 0,
+    "Dex": 0,
+    "Vit": 0,
+    "Spl": 0,
+    "Ins": 0,
+    "Def": 0
+  },
+  "Basic": {
+    "HP": 0,
+    "Disobedience": 0,
+    "HeldItem": 0,
+    "XP": 0,
+    "Happiness": 0
+  },
+  "Skills": {
+    "Fight": 0,
+    "Survival": 0,
+    "Contest": 0
+  },
+  "FightSpecialties": {
+    "Brawl": 0,
+    "Canalyze": 0,
+    "Evasion": 0,
+    "Melee": 0
+  },
+  "SurvivalSpecialties": {
+    "Alert": 0,
+    "Athletic": 0,
+    "Nature": 0,
+    "Stealth": 0
+  },
+  "ContestSpecialties": {
+    "Allure": 0,
+    "Etiquette": 0,
+    "Intimidate": 0,
+    "Perform": 0
+  },
+  "Moves": []
+}
