@@ -1,4 +1,4 @@
-pokemon = {
+{
   "Name": "",
   "Pokemon": "",
   "Type": "",
@@ -30,10 +30,11 @@ pokemon = {
   },
   "Basic": {
     "HP": 0,
+    "XP": 0,
     "Disobedience": 0,
     "HeldItem": 0,
-    "XP": 0,
-    "Happiness": 0
+    "Happiness": 0,
+    "Loyalty": 0
   },
   "Skills": {
     "Fight": 0,

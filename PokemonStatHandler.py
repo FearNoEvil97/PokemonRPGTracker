@@ -4,7 +4,6 @@ class PSH:
         self.path = path
         f = open(self.path, "r")
         self.data = json.load(f)
-        print(self.data)
         f.close()
     
     def save(self):
@@ -334,4 +333,5 @@ class PSH:
     def setMoves(self, Moves):
         self.data["Moves"] = Moves
         self.save()
+        
         
