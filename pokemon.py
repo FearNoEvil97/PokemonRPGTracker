@@ -323,95 +323,345 @@ class Pokemon:
 #6 for new, then 6x current score for specialties        
 #Fight Specialties
     def getBrawl(self):
-        return self.data["FightSpecialties"]["Brawl"]
+        return self.psh.getBrawl()
     
-    def setBrawl(self, Brawl):
-        self.data["FightSpecialties"]["Brawl"] = Brawl
-        self.save()
+    def addBrawl(self):
+        if self.psh.getBrawl() < 5:
+            if self.psh.getBrawl() == 0:
+                self.psh.setXP(self.psh.getXP() + 6)
+            else:
+                self.psh.setXP(self.psh.getXP() + (self.psh.getBrawl()*6))
+            
+            self.psh.setBrawl(self.psh.getBrawl() + 1)
+            return 0
+        else:
+            return -1
+    
+    def subtractBrawl(self):
+        if self.psh.getBrawl() > 0:
+            if self.psh.getBrawl() == 1:
+                self.psh.setXP(self.psh.getXP() - 6)
+            else:
+                self.psh.setXP(self.psh.getXP() - (self.psh.getBrawl()*6))
+            
+            self.psh.setBrawl(self.psh.getBrawl() - 1)
+            return 0
+        else:
+            return -1
         
     def getCanalyze(self):
-        return self.data["FightSpecialties"]["Canalyze"]
+        return self.psh.getCanalyze()
     
-    def setCanalyze(self, Canalyze):
-        self.data["FightSpecialties"]["Canalyze"] = Canalyze
-        self.save()        
+    def addCanalyze(self):
+        if self.psh.getCanalyze() < 5:
+            if self.psh.getCanalyze() == 0:
+                self.psh.setXP(self.psh.getXP() + 6)
+            else:
+                self.psh.setXP(self.psh.getXP() + (self.psh.getCanalyze()*6))
+            
+            self.psh.setCanalyze(self.psh.getCanalyze() + 1)
+            return 0
+        else:
+            return -1
+    
+    def subtractCanalyze(self):
+        if self.psh.getCanalyze() > 0:
+            if self.psh.getCanalyze() == 1:
+                self.psh.setXP(self.psh.getXP() - 6)
+            else:
+                self.psh.setXP(self.psh.getXP() - (self.psh.getCanalyze()*6))
+            
+            self.psh.setCanalyze(self.psh.getCanalyze() - 1)
+            return 0
+        else:
+            return -1        
         
     def getEvasion(self):
-        return self.data["FightSpecialties"]["Evasion"]
+        return self.psh.getEvasion()
     
-    def setEvasion(self, Evasion):
-        self.data["FightSpecialties"]["Evasion"] = Evasion
-        self.save()   
+    def addEvasion(self):
+        if self.psh.getEvasion() < 5:
+            if self.psh.getEvasion() == 0:
+                self.psh.setXP(self.psh.getXP() + 6)
+            else:
+                self.psh.setXP(self.psh.getXP() + (self.psh.getEvasion()*6))
+            
+            self.psh.setEvasion(self.psh.getEvasion() + 1)
+            return 0
+        else:
+            return -1
     
+    def subtractEvasion(self):
+        if self.psh.getEvasion() > 0:
+            if self.psh.getEvasion() == 1:
+                self.psh.setXP(self.psh.getXP() - 6)
+            else:
+                self.psh.setXP(self.psh.getXP() - (self.psh.getEvasion()*6))
+            
+            self.psh.setEvasion(self.psh.getEvasion() - 1)
+            return 0
+        else:
+            return -1        
+
     def getMelee(self):
-        return self.data["FightSpecialties"]["Melee"]
+        return self.psh.getMelee()
     
-    def setMelee(self, Melee):
-        self.data["FightSpecialties"]["Melee"] = Melee
-        self.save()     
+    def addMelee(self):
+        if self.psh.getMelee() < 5:
+            if self.psh.getMelee() == 0:
+                self.psh.setXP(self.psh.getXP() + 6)
+            else:
+                self.psh.setXP(self.psh.getXP() + (self.psh.getMelee()*6))
+            
+            self.psh.setMelee(self.psh.getMelee() + 1)
+            return 0
+        else:
+            return -1
+    
+    def subtractMelee(self):
+        if self.psh.getMelee() > 0:
+            if self.psh.getMelee() == 1:
+                self.psh.setXP(self.psh.getXP() - 6)
+            else:
+                self.psh.setXP(self.psh.getXP() - (self.psh.getMelee()*6))
+            
+            self.psh.setMelee(self.psh.getMelee() - 1)
+            return 0
+        else:
+            return -1        
+    
 
 #Survival Specialities
     def getAlert(self):
-        return self.data["SurvivalSpecialties"]["Alert"]
+        return self.psh.getAlert()
     
-    def setAlert(self, Alert):
-        self.data["SurvivalSpecialties"]["Alert"] = Alert
-        self.save() 
-        
+    def addAlert(self):
+        if self.psh.getAlert() < 5:
+            if self.psh.getAlert() == 0:
+                self.psh.setXP(self.psh.getXP() + 6)
+            else:
+                self.psh.setXP(self.psh.getXP() + (self.psh.getAlert()*6))
+            
+            self.psh.setAlert(self.psh.getAlert() + 1)
+            return 0
+        else:
+            return -1
+    
+    def subtractAlert(self):
+        if self.psh.getAlert() > 0:
+            if self.psh.getAlert() == 1:
+                self.psh.setXP(self.psh.getXP() - 6)
+            else:
+                self.psh.setXP(self.psh.getXP() - (self.psh.getAlert()*6))
+            
+            self.psh.setAlert(self.psh.getAlert() - 1)
+            return 0
+        else:
+            return -1        
+
     def getAthletic(self):
-        return self.data["SurvivalSpecialties"]["Athletic"]
+        return self.psh.getAthletic()
     
-    def setAthletic(self, Athletic):
-        self.data["SurvivalSpecialties"]["Athletic"] = Athletic
-        self.save() 
+    def addAthletic(self):
+        if self.psh.getAthletic() < 5:
+            if self.psh.getAthletic() == 0:
+                self.psh.setXP(self.psh.getXP() + 6)
+            else:
+                self.psh.setXP(self.psh.getXP() + (self.psh.getAthletic()*6))
+            
+            self.psh.setAthletic(self.psh.getAthletic() + 1)
+            return 0
+        else:
+            return -1
+    
+    def subtractAthletic(self):
+        if self.psh.getAthletic() > 0:
+            if self.psh.getAthletic() == 1:
+                self.psh.setXP(self.psh.getXP() - 6)
+            else:
+                self.psh.setXP(self.psh.getXP() - (self.psh.getAthletic()*6))
+            
+            self.psh.setAthletic(self.psh.getAthletic() - 1)
+            return 0
+        else:
+            return -1        
+
         
     def getNature(self):
-        return self.data["SurvivalSpecialties"]["Nature"]
+        return self.psh.getNature()
     
-    def setNature(self, Nature):
-        self.data["SurvivalSpecialties"]["Nature"] = Nature
-        self.save() 
-        
+    def addNature(self):
+        if self.psh.getNature() < 5:
+            if self.psh.getNature() == 0:
+                self.psh.setXP(self.psh.getXP() + 6)
+            else:
+                self.psh.setXP(self.psh.getXP() + (self.psh.getNature()*6))
+            
+            self.psh.setNature(self.psh.getNature() + 1)
+            return 0
+        else:
+            return -1
+    
+    def subtractNature(self):
+        if self.psh.getNature() > 0:
+            if self.psh.getNature() == 1:
+                self.psh.setXP(self.psh.getXP() - 6)
+            else:
+                self.psh.setXP(self.psh.getXP() - (self.psh.getNature()*6))
+            
+            self.psh.setNature(self.psh.getNature() - 1)
+            return 0
+        else:
+            return -1        
+
     def getStealth(self):
-        return self.data["SurvivalSpecialties"]["Stealth"]
+        return self.psh.getStealth()
     
-    def setStealth(self, Stealth):
-        self.data["SurvivalSpecialties"]["Stealth"] = Stealth
-        self.save()
+    def addStealth(self):
+        if self.psh.getStealth() < 5:
+            if self.psh.getStealth() == 0:
+                self.psh.setXP(self.psh.getXP() + 6)
+            else:
+                self.psh.setXP(self.psh.getXP() + (self.psh.getStealth()*6))
+            
+            self.psh.setStealth(self.psh.getStealth() + 1)
+            return 0
+        else:
+            return -1
+    
+    def subtractStealth(self):
+        if self.psh.getStealth() > 0:
+            if self.psh.getStealth() == 1:
+                self.psh.setXP(self.psh.getXP() - 6)
+            else:
+                self.psh.setXP(self.psh.getXP() - (self.psh.getStealth()*6))
+            
+            self.psh.setStealth(self.psh.getStealth() - 1)
+            return 0
+        else:
+            return -1        
+
 
 #ContestSpecialties
     def getAllure(self):
-        return self.data["ContestSpecialties"]["Allure"]
+        return self.psh.getAllure()
     
-    def setAllure(self, Allure):
-        self.data["ContestSpecialties"]["Allure"] = Allure
-        self.save() 
-        
+    def addAllure(self):
+        if self.psh.getAllure() < 5:
+            if self.psh.getAllure() == 0:
+                self.psh.setXP(self.psh.getXP() + 6)
+            else:
+                self.psh.setXP(self.psh.getXP() + (self.psh.getAllure()*6))
+            
+            self.psh.setAllure(self.psh.getAllure() + 1)
+            return 0
+        else:
+            return -1
+    
+    def subtractAllure(self):
+        if self.psh.getAllure() > 0:
+            if self.psh.getAllure() == 1:
+                self.psh.setXP(self.psh.getXP() - 6)
+            else:
+                self.psh.setXP(self.psh.getXP() - (self.psh.getAllure()*6))
+            
+            self.psh.setAllure(self.psh.getAllure() - 1)
+            return 0
+        else:
+            return -1        
+
     def getEtiquette(self):
-        return self.data["ContestSpecialties"]["Etiquette"]
+        return self.psh.getEtiquette()
     
-    def setEtiquette(self, Etiquette):
-        self.data["ContestSpecialties"]["Etiquette"] = Etiquette
-        self.save() 
+    def addEtiquette(self):
+        if self.psh.getEtiquette() < 5:
+            if self.psh.getEtiquette() == 0:
+                self.psh.setXP(self.psh.getXP() + 6)
+            else:
+                self.psh.setXP(self.psh.getXP() + (self.psh.getEtiquette()*6))
+            
+            self.psh.setEtiquette(self.psh.getEtiquette() + 1)
+            return 0
+        else:
+            return -1
+    
+    def subtractEtiquette(self):
+        if self.psh.getEtiquette() > 0:
+            if self.psh.getEtiquette() == 1:
+                self.psh.setXP(self.psh.getXP() - 6)
+            else:
+                self.psh.setXP(self.psh.getXP() - (self.psh.getEtiquette()*6))
+            
+            self.psh.setEtiquette(self.psh.getEtiquette() - 1)
+            return 0
+        else:
+            return -1        
+
         
     def getIntimidate(self):
-        return self.data["ContestSpecialties"]["Intimidate"]
+        return self.psh.getIntimidate()
     
-    def setIntimidate(self, Intimidate):
-        self.data["ContestSpecialties"]["Intimidate"] = Intimidate
-        self.save()
-        
+    def addIntimidate(self):
+        if self.psh.getIntimidate() < 5:
+            if self.psh.getIntimidate() == 0:
+                self.psh.setXP(self.psh.getXP() + 6)
+            else:
+                self.psh.setXP(self.psh.getXP() + (self.psh.getIntimidate()*6))
+            
+            self.psh.setIntimidate(self.psh.getIntimidate() + 1)
+            return 0
+        else:
+            return -1
+    
+    def subtractIntimidate(self):
+        if self.psh.getIntimidate() > 0:
+            if self.psh.getIntimidate() == 1:
+                self.psh.setXP(self.psh.getXP() - 6)
+            else:
+                self.psh.setXP(self.psh.getXP() - (self.psh.getIntimidate()*6))
+            
+            self.psh.setIntimidate(self.psh.getIntimidate() - 1)
+            return 0
+        else:
+            return -1        
+
+    
     def getPerform(self):
-        return self.data["ContestSpecialties"]["Perform"]
+        return self.psh.getPerform()
     
-    def setPerform(self, Perform):
-        self.data["ContestSpecialties"]["Perform"] = Perform
-        self.save()
+    def addPerform(self):
+        if self.psh.getPerform() < 5:
+            if self.psh.getPerform() == 0:
+                self.psh.setXP(self.psh.getXP() + 6)
+            else:
+                self.psh.setXP(self.psh.getXP() + (self.psh.getPerform()*6))
+            
+            self.psh.setPerform(self.psh.getPerform() + 1)
+            return 0
+        else:
+            return -1
+    
+    def subtractPerform(self):
+        if self.psh.getPerform() > 0:
+            if self.psh.getPerform() == 1:
+                self.psh.setXP(self.psh.getXP() - 6)
+            else:
+                self.psh.setXP(self.psh.getXP() - (self.psh.getPerform()*6))
+            
+            self.psh.setPerform(self.psh.getPerform() - 1)
+            return 0
+        else:
+            return -1        
         
     def getMoves(self):
-        return self.data["Moves"]
+        print("todo")
     
-    def setMoves(self, Moves):
-        self.data["Moves"] = Moves
-        self.save()
+    def addMove(self, name, types, xpCost, dmgType, dmg, description):
+        moveList = self.psh.getMoves()
+        tempList = [name, types, xpCost, dmgType, dmg, description]
+        self.psh.addMove(tempList)
+        self.psh.setXP(self.psh.getXP() - xpCost)
+    
+    def deleteMove(self, moveName):
+        print("todo")
         
